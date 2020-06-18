@@ -1,0 +1,68 @@
+\documentclass[12pt, openany]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[a4paper,left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage[frenchb]{babel}
+\usepackage{libertine}
+\usepackage[pdftex]{graphicx}
+
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
+\newcommand{\hsp}{\hspace{20pt}}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+\begin{document}
+
+\begin{titlepage}
+  \begin{sffamily}
+  \begin{center}
+
+    % Upper part of the page. The '~' is needed because \\
+    % only works if a paragraph has started.
+    \includegraphics[scale=0.15]{Logo_inpt.png}~\\[1cm]
+
+    \textsc{\LARGE Structures de données et algorithmique}\\[1cm]
+
+    \textsc{\huge Rapport de projet}\\[1cm]
+
+    % Title
+    \HRule \\[0.4cm]
+    { \huge \bfseries Problème du voyageur de commerce avec tour euclidien bitonique\\[0.4cm] }
+
+    \HRule \\[1cm]
+    \includegraphics[scale=0.2]{cloud.JPG}
+    \\[2cm]
+
+    % Author and supervisor
+    \begin{minipage}{0.4\textwidth}
+      \begin{flushleft} \large
+        \emph{Réalisé par : } \textsc{\\TCHAH Oussama \\ LAHSINI Mohamed}
+      \end{flushleft}
+    \end{minipage}
+    \begin{minipage}{0.4\textwidth}
+      \begin{flushright} \large
+        \emph{Encadré par :} \textsc{\\Mr. BENSAID Hicham}\\
+
+      \end{flushright}
+    \end{minipage}
+
+    \vfill
+
+    % Bottom of the page
+    {\large \textbf{Filière SUD - Cloud \& IOT}}
+
+  \end{center}
+  \end{sffamily}
+\end{titlepage}
+\newpage
+\tableofcontents
+\newpage
+\section{Introduction}
+\section{Modélisation du problème et méthodes de résolution}
+\subsection{Modélisation}
+\subsection{Méthodes de résolution}
+\section{Objectif}
+\section{Solution naïve}
+\section{Solution efficace}
+\section{Conclusion}
+\end{document}
