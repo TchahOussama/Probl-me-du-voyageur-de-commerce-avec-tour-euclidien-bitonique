@@ -58,8 +58,12 @@
 \tableofcontents
 \newpage
 \section{Introduction}
+Le problème du voyageur de commerce, étudié depuis le 19e siècle, est l’un des plus connus dans le domaine de la recherche opérationnelle. C’est déjà sous forme de jeu que William Rowan Hamilton a posé pour la première fois ce problème, dès 1859. Sous sa forme la plus classique, son énoncé est le suivant : « Un voyageur de commerce doit visiter une et une seule fois un nombre fini de villes et revenir à son point d’origine. Trouvez l’ordre de visite des villes qui minimise la distance totale parcourue par le voyageur ». Les domaines d’application sont nombreux : problèmes de logistique, de génétique, de transport aussi bien de marchandises que de personnes, et plus largement toutes sortes de problèmes d’ordonnancement.
+Malgré la simplicité de son énoncé, il s'agit d'un problème d'optimisation pour lequel on ne connait pas d'algorithme permettant de trouver une solution exacte rapidement dans tous les cas. Plus précisément, on ne connait pas d'algorithme en temps polynomial, et sa version décisionnelle (pour une distance D, existe-t-il un chemin plus court que D passant par toutes les villes et qui termine dans la ville de départ ?) est un problème NP-complet, ce qui est un indice de sa difficulté.
 \section{Modélisation du problème et méthodes de résolution}
 \subsection{Modélisation}
+Le problème du voyageur de commerce peut être modélisé à l’aide d’un graphe constitué d’un ensemble de sommets et d’un ensemble d’arêtes. Chaque sommet représente une ville, une arête symbolise le passage d’une ville à une autre, et on lui associe un poids pouvant représenter une distance, un temps de parcours ou encore un coût. Formellement, une instance est graphe complet G=(V,A,w) avec V un ensemble de sommets, A un ensemble d’arêtes et w une fonction de coût sur les arcs.
+Résoudre le problème du voyageur de commerce revient à trouver dans ce graphe un cycle passant par tous les sommets une unique fois (un tel cycle est dit « hamiltonien ») et qui soit de longueur minimale.
 \subsection{Méthodes de résolution}
 \section{Objectif}
 \section{Solution naïve}
