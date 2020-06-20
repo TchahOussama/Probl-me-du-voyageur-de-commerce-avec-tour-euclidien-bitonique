@@ -21,3 +21,31 @@ for i in range (2,len(table)+1):
             name = [i] + list(key)
             index = tuple(name)
             table[i][index] = poid[i,j]+value
+
+bitonique = table[len(table)]
+best_chemin = []
+counter = 0
+for key, value in bitonique.items():
+    chemin_depart = list(key)
+    chemin_retour = [len(table)]
+    for i in range (len(table),1,-1):
+        if i not in chemin_depart:
+            chemin_retour.append(i)
+    chemin_retour.append(1)
+    chemin_depart.reverse()        
+    chemin_value = value + bitonique[tuple(chemin_retour)]
+    chemin_retour.pop(0)
+    name =chemin_depart  + chemin_retour
+    print(name)
+    print(chemin_value)
+    if counter==0:
+        best_chemin = name
+        best_value = chemin_value
+    if chemin_value<best_value:
+        best_chemin = name
+        best_value = chemin_value
+        ################ if theres is a lot of routes who have the same value (case untreated)
+    counter+= 1
+print('---------------------------------------------------------------------')    
+print('The best route is : '+ str(best_chemin))
+print('His value is :' + str(best_value))
